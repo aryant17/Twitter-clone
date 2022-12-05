@@ -1,0 +1,28 @@
+.sidebar {
+      flex: 0.2
+}
+
+.menu-item {
+      padding: 5px;
+}
+
+.sidebar-menu:hover{
+      background-color: #e8f5fe;
+      border-radius: 50px;
+      color: var(--twitter-color);
+}
+
+.menu-item :active{
+      color: var(--twitter-color);
+}
+
+.sidebar-tweet-btn {
+      background-color: var(--twitter-color) !important;
+      color: white !important;
+      border-radius: 50px !important;
+      font-weight: 900 !important;
+      text-transform: inherit !important;
+      text-align: center !important;
+      border: none !important;
+      padding: 10px 30px 10px 30px !important;
+}
