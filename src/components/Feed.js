@@ -7,6 +7,7 @@ import Post from './Post';
 import { db } from "../config/fireabase"
 import { serverTimestamp, addDoc, collection , getDocs, orderBy, query } from 'firebase/firestore';
 import { useAuthChange } from '../config/useCustomHook';
+import ComposeBtn from './ComposeBtn';
 
 const Feed = () => {
 
@@ -64,13 +65,13 @@ const Feed = () => {
   
 
   return (
-    <div className='feed scrollbar-hide'>
+    <div className='relative feed scrollbar-hide border-r border-l border-gray-800'>
         <div className='px-5 flex justify-between feed-header '>
             <h1 style={{fontSize: "27px"}} className="my-4 font-bold text-2xl">
                   Latest Tweets
             </h1>
             <IconButton>
-              <AutoAwesomeOutlinedIcon sx={{fontSize:"45px", color: "black", padding: "3px"}}/>
+              <AutoAwesomeOutlinedIcon sx={{fontSize:"45px", color: `var(--twitter-color)`, padding: "3px"}}/>
             </IconButton>
         </div>
       <TweetBox text={text} onTextChange={(e) => {setText(e.target.value)}} onSubmitHandle={onSubmitHandle} photo={userdata.photo}/>
@@ -80,6 +81,7 @@ const Feed = () => {
           />
       ))}
     
+      <ComposeBtn />
     </div>
   )
 }

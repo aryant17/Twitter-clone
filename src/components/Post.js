@@ -1,4 +1,4 @@
-import { Avatar, IconButton } from '@mui/material'
+import { IconButton } from '@mui/material'
 import React from 'react'
 import './Post.css'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -17,10 +17,10 @@ const Post = ( {
       date      
 } ) => {
   return (
-    <div className='mt-5 post border-b'>
+    <div className='mt-5 post border-b border-slate-800'>
       <div className='flex m-1 p-1'>
-            <div className='mx-3'>
-                  <img className="rounded-full" alt={username} src={photo} style={{ width: "70px", height: "70px"}} />
+            <div className='mx-3' style={{minWidth: "60px"}}>
+                  <img className="rounded-full" alt={username} src={photo} style={{ width: "55px", height: "55px"}} />
             </div>
             <div className=''>
               <div className='flex items-center'>
@@ -36,13 +36,13 @@ const Post = ( {
               <div style={{color: "grey"}} className='text-lg'>
                 {date}
               </div>
-              <div className='m-1 text-xl'>
+              <div style={{paddingRight: "20px"}} className='m-1 text-xl'>
                 {text}
               </div>
             </div>
       </div>
 
-      <div className='m-5'>
+      <div className='m-3'>
             <div className='flex justify-around'>
                 <div className='flex items-center'>
                   <IconButton onClick={addLike}>

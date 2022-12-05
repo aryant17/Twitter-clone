@@ -1,14 +1,15 @@
 import React from 'react';
+import  './TweetBox.css';
 
 const TweetBox = ({onSubmitHandle, text, photo, onTextChange}) => {
 
   return (
-    <div className='tweetInput border-b my-5'>
+    <div className='tweetInput border-b border-slate-800 my-5'>
       <div className='flex mx-5'>
         <img alt="ProfilePic" style={{width : "70px", height: "70px"}} className='rounded-full' src=
         {photo} />
         <input
-        className="w-full p-4 mx-5 tweetInput"
+        className="w-full p-4 mx-5 border-b"
         placeholder='Whats Happening?'
         style={{fontSize: "20px"}}
         value={text}

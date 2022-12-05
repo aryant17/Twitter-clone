@@ -1,18 +1,20 @@
 .feed{
-      flex: 0.55;
-      border-right: 1px solid #F1F1F1;
-      
+      flex: 1.0;
+      max-width: 800px !important;
+      color: white !important;
       overflow-y: auto;
+      background-color: black !important;
 }
 
 .feed-header{
+      color: white !important;
+      overflow-y: auto;
       position: sticky;
-      background-color: white;
-      border: 1px solid #F1F1F1;
-      border-bottom: none
+      border-bottom: none;
+      background-color: black !important;
 };
 
-input :focus {
-      outline: none !important;
+input {
+      background-color: black !important;
 }
 

@@ -6,6 +6,7 @@ import Explore from '../components/Explore';
 import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import "./Home.css";
 
 const Home = (props) => {
   
@@ -27,10 +28,11 @@ const Home = (props) => {
 
 
   return (
-    <div className='app'>
-      <SideBar />
-      <Feed />
-      <Explore />
+    <div style={{backgroundColor: "black"}} className="">
+     <div className='app'>
+       <SideBar />
+       <Feed />
+     </div>
     </div>
   )
 }
